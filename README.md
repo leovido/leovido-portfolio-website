@@ -1,36 +1,114 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Personal Portfolio Website - Christian Leovido
 
-## Getting Started
+A modern, responsive portfolio website built with the Farcaster design system, featuring a glass morphism aesthetic, purple-blue gradient theme, and Pinterest-style masonry grid layout.
 
-First, run the development server:
+## 🚀 Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+- **Farcaster Design System**: Premium glass morphism UI with purple-blue gradients
+- **Pinterest-style Grid**: Resizable masonry layout for portfolio items
+- **Responsive Design**: Optimized for both desktop and mobile devices
+- **Smooth Animations**: Framer Motion powered interactions and transitions
+- **Theme Switching**: Support for Farcaster, Dark, and Light themes
+- **Performance Optimized**: Built with Next.js 15 and Tailwind CSS
+- **Accessibility**: WCAG compliant with keyboard navigation support
+
+## 🛠️ Tech Stack
+
+- **Framework**: Next.js 15 with TypeScript
+- **Styling**: Tailwind CSS with custom design system
+- **Animations**: Framer Motion
+- **Layout**: React Masonry CSS for Pinterest-style grid
+- **Icons**: Lucide React
+- **Font**: Instrument Sans, Inter
+
+## 🎨 Design System
+
+### Color Palette
+- **Background**: `bg-gradient-to-br from-blue-900/20 via-purple-900/20 to-indigo-900/20`
+- **Cards**: Glass effect with `bg-white/10 backdrop-blur-md border border-white/20`
+- **Text**: Primary white, secondary white/70, accent blue-400
+- **Interactive**: Purple-blue gradients with hover effects
+
+### Components
+- **Glass Cards**: Backdrop blur with subtle borders and shadows
+- **Floating Animations**: Subtle movement for hero elements
+- **Masonry Grid**: Pinterest-style responsive layout
+- **Theme Toggle**: Smooth transitions between themes
+
+## 🚀 Getting Started
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/your-username/personal-web3-website-leovido.git
+   cd personal-web3-website-leovido
+   ```
+
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
+
+3. **Run the development server**
+   ```bash
+   npm run dev
+   ```
+
+4. **Open your browser**
+   Navigate to [http://localhost:3000](http://localhost:3000)
+
+## 📱 Portfolio Items
+
+The portfolio showcases various project types:
+- **Web3/DeFi**: Trading platforms, NFT marketplaces
+- **AI/ML**: Code assistants, analytics platforms
+- **Full-stack**: Chat applications, mobile apps
+- **DevOps**: Monitoring systems, cloud architecture
+
+## 🎯 Customization
+
+### Adding Portfolio Items
+Edit `app/page.tsx` and add items to the `portfolioItems` array:
+
+```javascript
+{
+  title: "Your Project",
+  description: "Project description",
+  image: "https://your-image-url.com",
+  technologies: ["React", "TypeScript"],
+  category: "Web3",
+  year: "2024",
+  height: "medium"
+}
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Theme Configuration
+Modify theme settings in `tailwind.config.ts` and `app/globals.css`
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Animation Customization
+Adjust Framer Motion configurations in component files
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 📦 Build and Deploy
 
-## Learn More
+```bash
+# Build for production
+npm run build
 
-To learn more about Next.js, take a look at the following resources:
+# Start production server
+npm start
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🌐 Deploy on Vercel
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/your-username/personal-web3-website-leovido)
 
-## Deploy on Vercel
+## 📄 License
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+MIT License - see the [LICENSE](LICENSE) file for details
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🤝 Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+---
+
+**Built with ❤️ using the Farcaster Design System**

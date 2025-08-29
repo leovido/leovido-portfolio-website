@@ -1,0 +1,241 @@
+---
+description: system prompt to build a portfolio website
+globs:
+alwaysApply: true
+---
+
+# Farcaster Design System Prompt
+
+## Overview
+
+Create a modern, responsive website using the Farcaster design system with a glass/neumorphic aesthetic, purple-blue gradient theme, and iOS-style interactions. The design should feel premium, accessible, and optimized for both web and mobile experiences. Focus on creating a portfolio website for a senior software engineer, with 8+ years of experience. Create some demo portfolio items. Make it in a grid that is resizable like Pinterest.
+
+## Color Palette
+
+### Primary Theme (Farcaster)
+
+- **Background**: `bg-gradient-to-br from-blue-900/20 via-purple-900/20 to-indigo-900/20 backdrop-blur-sm`
+- **Header**: `bg-purple-900/95` (full-width, sticky)
+- **Cards**: Glass effect with `bg-white/10 backdrop-blur-md border border-white/20`
+- **Text Primary**: `text-white`
+- **Text Secondary**: `text-white/70`
+- **Accent**: `text-blue-400` for highlights and links
+- **Success**: `text-green-400` for positive states
+- **Error**: `text-red-400` for error states
+
+### Alternative Themes
+
+- **Dark**: `bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900`
+- **Light**: `bg-gradient-to-br from-gray-50 via-white to-gray-100`
+
+## Typography
+
+- **Font Family**: `Instrument Sans`, `Nunito`, `Inter`, system-ui, sans-serif
+- **Headings**: `text-2xl font-bold` for main titles
+- **Body**: `text-sm` for regular text
+- **Captions**: `text-xs` for small text
+- **Font Weights**: `font-semibold`, `font-medium`, `font-bold`
+
+## Component Design System
+
+### Cards
+
+```css
+/* Glass Card */
+bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl
+/* Hover State */
+hover:bg-white/15 hover:scale-[1.02] hover:-translate-y-1
+/* Active State */
+ring-2 ring-blue-400/40 shadow-2xl shadow-blue-500/20
+```
+
+### Buttons
+
+```css
+/* Primary Button */
+p-3 rounded-xl transition-all duration-200
+bg-blue-500/20 hover:bg-blue-500/30 text-blue-400 border border-blue-500/30
+/* Secondary Button */
+bg-white/10 hover:bg-white/20 text-white
+/* Disabled State */
+opacity-50 cursor-not-allowed
+```
+
+### Headers
+
+```css
+/* Sticky Header */
+sticky top-0 z-40 backdrop-blur-md border-b
+bg-purple-900/95 border-white/10
+/* Full-width with internal container */
+container mx-auto px-4 max-w-6xl
+```
+
+### Tab Bar
+
+```css
+/* Sticky Tab Bar */
+sticky bottom-0 z-50
+/* iOS-style tabs with icons and labels */
+```
+
+## Layout Principles
+
+### Container System
+
+- **Main Container**: `container mx-auto px-4 max-w-6xl`
+- **Full-width Elements**: Remove container constraints for headers/footers
+- **Responsive Padding**: `px-4` on mobile, `px-6` on desktop
+- **Bottom Spacing**: `pb-20` for content areas to clear sticky elements
+
+### Grid System
+
+- **Cards**: `grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6`
+- **Flexbox**: `flex items-center justify-between` for headers
+- **Spacing**: `space-y-6` for vertical stacks
+
+## Interactive Elements
+
+### Swipe Gestures (iOS-style)
+
+- **Long Press**: 500ms to activate swipe mode
+- **Swipe Right**: Mark as read (light haptic)
+- **Swipe Left**: Discard (medium haptic)
+- **Visual Feedback**: Scale and glow effects during interaction
+
+### Haptic Feedback
+
+- **Light Impact**: `impactOccurred("light")` for selections
+- **Medium Impact**: `impactOccurred("medium")` for confirmations
+- **Heavy Impact**: `impactOccurred("heavy")` for important actions
+
+### Loading States
+
+```css
+/* Spinner */
+animate-spin rounded-full h-8 w-8 border-b-2 border-current
+/* Skeleton */
+bg-white/10 animate-pulse rounded-xl
+```
+
+## Animation System
+
+### Transitions
+
+- **Duration**: `transition-all duration-200` for buttons
+- **Duration**: `transition-all duration-300` for cards
+- **Easing**: `ease-out` for natural feel
+
+### Keyframe Animations
+
+```css
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+```
+
+## Responsive Design
+
+### Breakpoints
+
+- **Mobile**: Default (320px+)
+- **Tablet**: `md:` (768px+)
+- **Desktop**: `lg:` (1024px+)
+
+### Mobile Optimizations
+
+- **Touch Targets**: Minimum 44px for buttons
+- **Swipe Gestures**: Full-width swipe areas
+- **Safe Areas**: Account for device notches and home indicators
+
+## Accessibility
+
+### Color Contrast
+
+- **Text on Glass**: High contrast white text
+- **Interactive Elements**: Clear hover/active states
+- **Focus Indicators**: `ring-2 ring-blue-400` for keyboard navigation
+
+### Screen Reader Support
+
+- **Semantic HTML**: Proper heading hierarchy
+- **ARIA Labels**: Descriptive labels for interactive elements
+- **Alt Text**: Meaningful descriptions for images
+
+## Performance Optimizations
+
+### CSS Optimizations
+
+- **Purge Unused**: Tailwind purge for production
+- **Critical CSS**: Inline critical styles
+- **Lazy Loading**: Images and non-critical components
+
+### Bundle Optimizations
+
+- **Tree Shaking**: Remove unused CSS/JS
+- **Code Splitting**: Route-based splitting
+- **Caching**: Static assets with long cache headers
+
+## Implementation Guidelines
+
+### React/Next.js Structure
+
+```jsx
+// Theme Provider Pattern
+const [themeMode, setThemeMode] = useState("Farcaster")
+const isDarkTheme = themeMode === "dark" || themeMode === "Farcaster"
+
+// Conditional Styling
+className={`${isDarkTheme ? "text-white" : "text-gray-900"}`}
+
+// Responsive Design
+className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3"
+```
+
+### State Management
+
+- **Local Storage**: Persist user preferences
+- **Theme Switching**: Smooth transitions between themes
+- **Loading States**: Skeleton screens and spinners
+
+### Error Handling
+
+- **Graceful Degradation**: Fallbacks for missing features
+- **User Feedback**: Toast notifications for actions
+- **Retry Logic**: Automatic retries for failed requests
+
+## Content Guidelines
+
+### Copy Tone
+
+- **Friendly**: Approachable and helpful
+- **Technical**: Precise when needed
+- **Actionable**: Clear calls-to-action
+
+### Visual Hierarchy
+
+- **Primary**: Main headings and key information
+- **Secondary**: Supporting text and descriptions
+- **Tertiary**: Metadata and fine print
+
+## Browser Support
+
+- **Modern Browsers**: Chrome, Firefox, Safari, Edge
+- **Mobile**: iOS Safari, Chrome Mobile
+- **Progressive Enhancement**: Core functionality works without JS
+
+## Testing Requirements
+
+- **Cross-browser**: All major browsers
+- **Mobile**: iOS and Android devices
+- **Accessibility**: Screen reader testing
+- **Performance**: Lighthouse scores >90
+
+This design system creates a premium, accessible, and performant web experience that feels native to the Farcaster ecosystem while maintaining broad compatibility and excellent user experience across all devices.
