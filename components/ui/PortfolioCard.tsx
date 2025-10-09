@@ -1,14 +1,23 @@
 "use client";
 
-import { motion } from "framer-motion";
-import { ExternalLink, Github, Calendar, Users, Star } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
+import {
+  ExternalLink,
+  Github,
+  Calendar,
+  Users,
+  Star,
+  ChevronLeft,
+  ChevronRight,
+} from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import { useState } from "react";
 
 interface PortfolioCardProps {
   title: string;
   description: string;
-  image: string;
+  image: string | string[];
   technologies: string[];
   category: string;
   year: string;
@@ -32,6 +41,27 @@ export default function PortfolioCard({
   featured = false,
   slug,
 }: PortfolioCardProps) {
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const images = Array.isArray(image) ? image : [image];
+  const hasMultipleImages = images.length > 1;
+
+  const nextImage = (e: React.MouseEvent) => {
+    e.preventDefault();
+    e.stopPropagation();
+    setCurrentImageIndex((prev) => (prev + 1) % images.length);
+  };
+
+  const prevImage = (e: React.MouseEvent) => {
+    e.preventDefault();
+    e.stopPropagation();
+    setCurrentImageIndex((prev) => (prev - 1 + images.length) % images.length);
+  };
+
+  const goToImage = (index: number, e: React.MouseEvent) => {
+    e.preventDefault();
+    e.stopPropagation();
+    setCurrentImageIndex(index);
+  };
   return (
     <motion.div
       className="portfolio-card bg-slate-800/80 backdrop-blur-md border border-slate-700 rounded-2xl overflow-hidden transition-all duration-300 group cursor-pointer hover:bg-slate-800 hover:scale-[1.02] hover:-translate-y-1 relative"
@@ -54,13 +84,66 @@ export default function PortfolioCard({
 
       {/* Header with image and overlay */}
       <div className="relative h-48 overflow-hidden">
-        <Image
-          src={image}
-          alt={title}
-          fill
-          className="object-cover transition-transform duration-500 group-hover:scale-105"
-          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-        />
+        {/* Carousel Container */}
+        <div className="relative w-full h-full">
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={currentImageIndex}
+              initial={{ opacity: 0, x: 20 }}
+              animate={{ opacity: 1, x: 0 }}
+              exit={{ opacity: 0, x: -20 }}
+              transition={{ duration: 0.3, ease: "easeInOut" }}
+              className="absolute inset-0"
+            >
+              <Image
+                src={images[currentImageIndex]}
+                alt={`${title} - Image ${currentImageIndex + 1}`}
+                fill
+                className={`transition-transform duration-500 group-hover:scale-105 ${
+                  category === "iOS" || category === "Mobile"
+                    ? "object-contain bg-slate-900/50"
+                    : "object-contain"
+                }`}
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+              />
+            </motion.div>
+          </AnimatePresence>
+
+          {/* Navigation Arrows */}
+          {hasMultipleImages && (
+            <>
+              <button
+                onClick={prevImage}
+                className="absolute left-2 top-1/2 -translate-y-1/2 p-1.5 bg-slate-800/80 backdrop-blur-sm border border-slate-600 rounded-full hover:bg-slate-700 transition-colors opacity-0 group-hover:opacity-100 z-30"
+              >
+                <ChevronLeft size={16} className="text-white" />
+              </button>
+              <button
+                onClick={nextImage}
+                className="absolute right-2 top-1/2 -translate-y-1/2 p-1.5 bg-slate-800/80 backdrop-blur-sm border border-slate-600 rounded-full hover:bg-slate-700 transition-colors opacity-0 group-hover:opacity-100 z-30"
+              >
+                <ChevronRight size={16} className="text-white" />
+              </button>
+            </>
+          )}
+
+          {/* Navigation Dots */}
+          {hasMultipleImages && (
+            <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex space-x-1.5 z-30">
+              {images.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={(e) => goToImage(index, e)}
+                  className={`w-2 h-2 rounded-full transition-all duration-200 ${
+                    index === currentImageIndex
+                      ? "bg-white scale-125"
+                      : "bg-white/50 hover:bg-white/75"
+                  }`}
+                />
+              ))}
+            </div>
+          )}
+        </div>
 
         {/* Gradient Overlay */}
         <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-slate-900/20 to-transparent" />

@@ -49,7 +49,7 @@ export default function Header({ themeMode, setThemeMode }: HeaderProps) {
               <span className="text-white font-bold text-lg">CL</span>
             </div>
             <span className="ml-3 text-xl font-bold text-white">
-              Christian Leovido
+              Christian Ray Leovido
             </span>
           </motion.div>
 
