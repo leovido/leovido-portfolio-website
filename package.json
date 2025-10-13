@@ -13,7 +13,7 @@
     "test": "jest",
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage",
-    "prepare": "lefthook install"
+    "prepare": "is-ci || lefthook install"
   },
   "dependencies": {
     "@headlessui/react": "^2.2.7",
@@ -37,6 +37,7 @@
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "autoprefixer": "^10.4.21",
+    "is-ci": "^4.1.0",
     "jest": "^30.2.0",
     "jest-environment-jsdom": "^30.2.0",
     "lefthook": "^1.13.6",
