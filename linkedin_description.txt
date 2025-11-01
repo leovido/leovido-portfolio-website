@@ -1,0 +1,2 @@
+Senior iOS Engineer | 9+ years building production apps at scale | Led iOS transformation at Avios (British Airways) reducing build times 80% & release cycles from 8w to 2w | SwiftUI/UIKit/Combine expert | CI/CD automation (Fastlane + GitHub Actions) | TDD/BDD advocate | Mentored 85+ developers (5⭐ rating) | Available for remote roles | Madrid-based
+
