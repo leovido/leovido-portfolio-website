@@ -1,14 +1,14 @@
 "use client";
 
-import { motion, AnimatePresence } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import {
-  ExternalLink,
-  Github,
   Calendar,
-  Users,
-  Star,
   ChevronLeft,
   ChevronRight,
+  ExternalLink,
+  Github,
+  Star,
+  Users,
 } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
@@ -77,10 +77,7 @@ export default function PortfolioCard({
       }}
     >
       {/* Clickable overlay for navigation */}
-      <Link
-        href={`/projects/${slug}`}
-        className="block absolute inset-0 z-10"
-      />
+      <Link href={`/projects/${slug}`} className="block absolute inset-0 z-10" />
 
       {/* Header with image and overlay */}
       <div className="relative h-48 overflow-hidden">
@@ -113,12 +110,14 @@ export default function PortfolioCard({
           {hasMultipleImages && (
             <>
               <button
+                type="button"
                 onClick={prevImage}
                 className="absolute left-2 top-1/2 -translate-y-1/2 p-1.5 bg-slate-800/80 backdrop-blur-sm border border-slate-600 rounded-full hover:bg-slate-700 transition-colors opacity-0 group-hover:opacity-100 z-30"
               >
                 <ChevronLeft size={16} className="text-white" />
               </button>
               <button
+                type="button"
                 onClick={nextImage}
                 className="absolute right-2 top-1/2 -translate-y-1/2 p-1.5 bg-slate-800/80 backdrop-blur-sm border border-slate-600 rounded-full hover:bg-slate-700 transition-colors opacity-0 group-hover:opacity-100 z-30"
               >
@@ -132,6 +131,7 @@ export default function PortfolioCard({
             <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex space-x-1.5 z-30">
               {images.map((_, index) => (
                 <button
+                  type="button"
                   key={index}
                   onClick={(e) => goToImage(index, e)}
                   className={`w-2 h-2 rounded-full transition-all duration-200 ${
@@ -157,9 +157,7 @@ export default function PortfolioCard({
             transition={{ delay: 0.2 }}
           >
             <Star size={12} className="text-yellow-900 fill-current" />
-            <span className="text-yellow-900 text-xs font-semibold">
-              Featured
-            </span>
+            <span className="text-yellow-900 text-xs font-semibold">Featured</span>
           </motion.div>
         )}
 
@@ -207,9 +205,7 @@ export default function PortfolioCard({
         </h3>
 
         {/* Description */}
-        <p className="text-slate-200 text-sm leading-relaxed line-clamp-4">
-          {description}
-        </p>
+        <p className="text-slate-200 text-sm leading-relaxed line-clamp-4">{description}</p>
 
         {/* Metadata */}
         <div className="flex items-center justify-between text-xs text-slate-400">

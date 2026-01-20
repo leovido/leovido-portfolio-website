@@ -1,24 +1,23 @@
 "use client";
 
-import Link from "next/link";
-import Image from "next/image";
-import { useState } from "react";
-import React from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import {
   ArrowLeft,
-  ExternalLink,
-  Github,
-  Users,
-  Calendar,
-  Code,
-  Lightbulb,
-  TrendingUp,
-  Target,
   Award,
+  Calendar,
   ChevronLeft,
   ChevronRight,
+  Code,
+  ExternalLink,
+  Github,
+  Lightbulb,
+  Target,
+  TrendingUp,
+  Users,
 } from "lucide-react";
+import Image from "next/image";
+import Link from "next/link";
+import React, { useState } from "react";
 
 // This would typically come from a database or CMS
 // For now, we'll define it here and you can help me populate it
@@ -47,54 +46,22 @@ The app has achieved 4.5 stars with 1.2K+ ratings on the App Store, serving as a
     category: "Mobile",
     year: "2021-2025",
     githubUrl: "https://github.com/leovido/avios-app",
-    demoUrl:
-      "https://apps.apple.com/us/app/avios-shop-collect-travel/id1388235740",
+    demoUrl: "https://apps.apple.com/us/app/avios-shop-collect-travel/id1388235740",
     teamSize: 8,
     featured: true,
     technicalSkills: {
-      frontend: [
-        "React Native",
-        "React",
-        "TypeScript",
-        "Redux",
-        "Native Modules",
-      ],
+      frontend: ["React Native", "React", "TypeScript", "Redux", "Native Modules"],
       backend: ["Node.js", "REST APIs", "GraphQL", "Microservices"],
-      mobile: [
-        "iOS",
-        "Android",
-        "Apple Wallet",
-        "Google Wallet",
-        "Push Notifications",
-      ],
-      web3: [
-        "Mastercard Integration",
-        "Payment Processing",
-        "Financial Services",
-      ],
-      infrastructure: [
-        "GitHub Actions",
-        "Fastlane",
-        "CI/CD",
-        "App Store",
-        "Play Store",
-      ],
-      testing: [
-        "Jest",
-        "Detox",
-        "Unit Tests",
-        "E2E Testing",
-        "Performance Testing",
-      ],
+      mobile: ["iOS", "Android", "Apple Wallet", "Google Wallet", "Push Notifications"],
+      web3: ["Mastercard Integration", "Payment Processing", "Financial Services"],
+      infrastructure: ["GitHub Actions", "Fastlane", "CI/CD", "App Store", "Play Store"],
+      testing: ["Jest", "Detox", "Unit Tests", "E2E Testing", "Performance Testing"],
     },
     contributions: {
       development: "Led React Native migration and core feature development",
-      architecture:
-        "Designed scalable cross-platform architecture with native integrations",
-      projectManagement:
-        "Managed DevOps strategy implementation and release optimization",
-      entrepreneurship:
-        "Identified opportunities for process improvement and automation",
+      architecture: "Designed scalable cross-platform architecture with native integrations",
+      projectManagement: "Managed DevOps strategy implementation and release optimization",
+      entrepreneurship: "Identified opportunities for process improvement and automation",
       innovation: "Pioneered DevOps practices that reduced release time by 75%",
     },
     challenges: [
@@ -130,8 +97,7 @@ The app has achieved 4.5 stars with 1.2K+ ratings on the App Store, serving as a
     fullDescription: `ReplyCast is a sophisticated Farcaster client that revolutionizes how users interact with the decentralized social protocol. The application addresses key challenges in social media management by providing intuitive conversation threading, real-time updates, and seamless integration with the Farcaster ecosystem.
 
 As the lead developer and architect, I designed and implemented a scalable architecture that handles real-time data synchronization, complex conversation trees, and efficient state management. The project demonstrates advanced React patterns, TypeScript best practices, and deep understanding of Web3 protocols.`,
-    image:
-      "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=800&h=600&fit=crop",
+    image: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=800&h=600&fit=crop",
     technologies: ["TypeScript", "React", "Next.js", "Farcaster", "Real-time"],
     category: "Web3",
     year: "2025",
@@ -141,19 +107,9 @@ As the lead developer and architect, I designed and implemented a scalable archi
     featured: true,
     // We'll expand these sections together
     technicalSkills: {
-      frontend: [
-        "React 18",
-        "TypeScript",
-        "Next.js 14",
-        "Tailwind CSS",
-        "Framer Motion",
-      ],
+      frontend: ["React 18", "TypeScript", "Next.js 14", "Tailwind CSS", "Framer Motion"],
       backend: ["Node.js", "API Design", "Real-time WebSockets"],
-      web3: [
-        "Farcaster Protocol",
-        "Ethereum Integration",
-        "Wallet Connections",
-      ],
+      web3: ["Farcaster Protocol", "Ethereum Integration", "Wallet Connections"],
       infrastructure: ["Vercel", "GitHub Actions", "CI/CD"],
       testing: ["Jest", "React Testing Library", "E2E Testing"],
     },
@@ -215,10 +171,8 @@ As the sole developer, I designed and implemented the entire application from co
     },
     contributions: {
       development: "Sole developer responsible for entire iOS application",
-      architecture:
-        "Designed MVVM architecture with clean separation of concerns",
-      projectManagement:
-        "Managed project timeline from concept to App Store submission",
+      architecture: "Designed MVVM architecture with clean separation of concerns",
+      projectManagement: "Managed project timeline from concept to App Store submission",
       entrepreneurship: "Identified market opportunity in Farcaster ecosystem",
       innovation: "Pioneered Farcaster integration patterns for iOS",
     },
@@ -310,16 +264,8 @@ As the sole developer, I built this mini-app to explore Farcaster's protocol cap
     fullDescription: `Rumourcast is an innovative Farcaster client that enables users to share anonymous rumours while maintaining privacy through Zero-Knowledge proofs. The application addresses the need for anonymous social interaction within the decentralized social ecosystem while ensuring data integrity and user privacy.
 
 As the lead developer, I designed and implemented the entire full-stack application, including the frontend interface, backend API, database design, and Zero-Knowledge proof integration. The project demonstrates advanced cryptographic knowledge, full-stack development capabilities, and innovative approach to privacy-preserving social media.`,
-    image:
-      "https://images.unsplash.com/photo-1566241440091-ec10de8db2e1?w=800&h=600&fit=crop",
-    technologies: [
-      "TypeScript",
-      "Next.js",
-      "Noir",
-      "PostgreSQL",
-      "Redis",
-      "ZK Proofs",
-    ],
+    image: "https://images.unsplash.com/photo-1566241440091-ec10de8db2e1?w=800&h=600&fit=crop",
+    technologies: ["TypeScript", "Next.js", "Noir", "PostgreSQL", "Redis", "ZK Proofs"],
     category: "Web3",
     year: "2024",
     githubUrl: "https://github.com/leovido/rumourcast",
@@ -330,25 +276,14 @@ As the lead developer, I designed and implemented the entire full-stack applicat
       frontend: ["Next.js 14", "TypeScript", "Tailwind CSS", "Framer Motion"],
       backend: ["Node.js", "PostgreSQL", "Redis", "API Design"],
       web3: ["Zero-Knowledge Proofs", "Noir", "Farcaster Protocol", "Privacy"],
-      infrastructure: [
-        "Vercel",
-        "GitHub Actions",
-        "CI/CD",
-        "Database Optimization",
-      ],
-      testing: [
-        "Jest",
-        "React Testing Library",
-        "E2E Testing",
-        "ZK Proof Testing",
-      ],
+      infrastructure: ["Vercel", "GitHub Actions", "CI/CD", "Database Optimization"],
+      testing: ["Jest", "React Testing Library", "E2E Testing", "ZK Proof Testing"],
     },
     contributions: {
       development: "Led full-stack development from concept to deployment",
       architecture: "Designed privacy-preserving architecture with ZK proofs",
       projectManagement: "Managed project timeline and milestone delivery",
-      entrepreneurship:
-        "Identified market opportunity for anonymous social media",
+      entrepreneurship: "Identified market opportunity for anonymous social media",
       innovation: "Pioneered ZK proof integration in social media applications",
     },
     challenges: [
@@ -402,10 +337,8 @@ As the sole developer, I built this frame application to explore Farcaster's fra
       development: "Sole developer responsible for entire frame application",
       architecture: "Designed frame-based architecture for community features",
       projectManagement: "Managed project from concept to deployment",
-      entrepreneurship:
-        "Identified opportunity for community recognition tools",
-      innovation:
-        "Pioneered community recognition patterns in Farcaster frames",
+      entrepreneurship: "Identified opportunity for community recognition tools",
+      innovation: "Pioneered community recognition patterns in Farcaster frames",
     },
     challenges: [
       "Implementing frame-based user interactions",
@@ -456,8 +389,7 @@ As the sole developer, I built this demo application to explore and demonstrate 
     },
     contributions: {
       development: "Sole developer responsible for entire iOS application",
-      architecture:
-        "Designed TCA-based architecture with clean separation of concerns",
+      architecture: "Designed TCA-based architecture with clean separation of concerns",
       projectManagement: "Managed project from concept to completion",
       entrepreneurship: "Demonstrated advanced iOS architectural patterns",
       innovation: "Showcased TCA patterns in financial application context",
@@ -495,8 +427,7 @@ As the sole developer, I built this demo application to explore and demonstrate 
     fullDescription: `BarChart Calories Tracker is a comprehensive health and fitness iOS application that helps users track and visualize their health data through beautiful charts and analytics. The app integrates with HealthKit to provide real-time health data and offers intuitive visualizations for calories, exercise, and heart rate information.
 
 As the sole developer, I built this application to explore health data visualization and HealthKit integration while creating a useful tool for personal health tracking. The project demonstrates expertise in iOS health development, data visualization, and user experience design.`,
-    image:
-      "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=800&h=600&fit=crop",
+    image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=800&h=600&fit=crop",
     technologies: ["Swift", "SwiftUI", "HealthKit", "Charts"],
     category: "iOS",
     year: "2024",
@@ -550,8 +481,7 @@ As the sole developer, I built this application to explore health data visualiza
     fullDescription: `ZK Explorations with Noir is a comprehensive learning project focused on understanding and implementing Zero-Knowledge proofs using the Noir programming language. The project demonstrates password verification in ZK, showcasing how cryptographic proofs can be used to verify information without revealing the underlying data.
 
 As the sole developer, I built this project to explore cutting-edge cryptographic technologies and understand the practical applications of Zero-Knowledge proofs. The project demonstrates self-directed learning, cryptographic knowledge, and the ability to work with emerging technologies.`,
-    image:
-      "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?w=800&h=600&fit=crop",
+    image: "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?w=800&h=600&fit=crop",
     technologies: ["Noir", "Zero-Knowledge", "Cryptography", "Rust"],
     category: "Web3",
     year: "2024",
@@ -568,10 +498,8 @@ As the sole developer, I built this project to explore cutting-edge cryptographi
     contributions: {
       development: "Sole developer responsible for entire ZK learning project",
       architecture: "Designed ZK proof system for password verification",
-      projectManagement:
-        "Managed self-directed learning and project development",
-      entrepreneurship:
-        "Demonstrated commitment to learning cutting-edge technologies",
+      projectManagement: "Managed self-directed learning and project development",
+      entrepreneurship: "Demonstrated commitment to learning cutting-edge technologies",
       innovation: "Pioneered ZK proof patterns for password verification",
     },
     challenges: [
@@ -607,8 +535,7 @@ As the sole developer, I built this project to explore cutting-edge cryptographi
     fullDescription: `Forest App Clone is a productivity-focused iOS application that replicates the core functionality of the popular Forest app. The app helps users stay focused by using a timer-based system that grows virtual trees, encouraging productivity through gamification and visual feedback.
 
 As the sole developer, I built this clone to understand the Forest app's architecture and user experience while implementing modern iOS development practices. The project demonstrates expertise in iOS development, Firebase integration, and productivity app design.`,
-    image:
-      "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=800&h=600&fit=crop",
+    image: "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=800&h=600&fit=crop",
     technologies: ["Swift", "Firebase", "UIKit", "Core Data"],
     category: "iOS",
     year: "2020",
@@ -627,8 +554,7 @@ As the sole developer, I built this clone to understand the Forest app's archite
       architecture: "Designed MVVM architecture with Firebase integration",
       projectManagement: "Managed project from concept to completion",
       entrepreneurship: "Demonstrated understanding of productivity app market",
-      innovation:
-        "Implemented gamification patterns for productivity enhancement",
+      innovation: "Implemented gamification patterns for productivity enhancement",
     },
     challenges: [
       "Implementing timer functionality with background execution",
@@ -663,8 +589,7 @@ As the sole developer, I built this clone to understand the Forest app's archite
     fullDescription: `BudgetMe App is a comprehensive personal finance application that integrates with Starling Bank's API to provide real-time banking data and financial insights. The app helps users track expenses, analyze spending patterns, and manage their personal finances through an intuitive interface.
 
 As the sole developer, I built this application to explore banking API integration and financial app development while creating a useful tool for personal finance management. The project demonstrates expertise in API integration, financial data processing, and modern iOS development patterns.`,
-    image:
-      "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=800&h=600&fit=crop",
+    image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=800&h=600&fit=crop",
     technologies: ["Swift", "RxSwift", "MVVM", "Banking API"],
     category: "iOS",
     year: "2023",
@@ -680,8 +605,7 @@ As the sole developer, I built this application to explore banking API integrati
     },
     contributions: {
       development: "Sole developer responsible for entire finance application",
-      architecture:
-        "Designed MVVM architecture with RxSwift for reactive programming",
+      architecture: "Designed MVVM architecture with RxSwift for reactive programming",
       projectManagement: "Managed project from concept to completion",
       entrepreneurship: "Created useful personal finance management tool",
       innovation: "Pioneered banking API integration patterns in iOS",
@@ -713,11 +637,7 @@ As the sole developer, I built this application to explore banking API integrati
   },
 };
 
-export default function ProjectPage({
-  params,
-}: {
-  params: Promise<{ slug: string }>;
-}) {
+export default function ProjectPage({ params }: { params: Promise<{ slug: string }> }) {
   const [slug, setSlug] = useState<string>("");
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
@@ -804,9 +724,7 @@ export default function ProjectPage({
                   </span>
                 )}
               </div>
-              <h1 className="text-4xl lg:text-5xl font-bold text-white mb-4">
-                {project.title}
-              </h1>
+              <h1 className="text-4xl lg:text-5xl font-bold text-white mb-4">{project.title}</h1>
               <p className="text-xl text-slate-300 mb-6">{project.tagline}</p>
               <p className="text-slate-200 text-lg leading-relaxed whitespace-pre-line">
                 {project.fullDescription}
@@ -864,12 +782,14 @@ export default function ProjectPage({
                 {hasMultipleImages && (
                   <>
                     <button
+                      type="button"
                       onClick={prevImage}
                       className="absolute left-4 top-1/2 -translate-y-1/2 p-2 bg-slate-800/80 backdrop-blur-sm border border-slate-600 rounded-full hover:bg-slate-700 transition-colors z-30"
                     >
                       <ChevronLeft size={20} className="text-white" />
                     </button>
                     <button
+                      type="button"
                       onClick={nextImage}
                       className="absolute right-4 top-1/2 -translate-y-1/2 p-2 bg-slate-800/80 backdrop-blur-sm border border-slate-600 rounded-full hover:bg-slate-700 transition-colors z-30"
                     >
@@ -883,6 +803,7 @@ export default function ProjectPage({
                   <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex space-x-2 z-30">
                     {images.map((_, index) => (
                       <button
+                        type="button"
                         key={index}
                         onClick={() => goToImage(index)}
                         className={`w-3 h-3 rounded-full transition-all duration-200 ${
@@ -906,9 +827,7 @@ export default function ProjectPage({
         <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-12">
           <div className="bg-slate-800/80 backdrop-blur-md border border-slate-700 rounded-xl p-6 text-center">
             <Users className="w-8 h-8 text-blue-400 mx-auto mb-3" />
-            <div className="text-2xl font-bold text-white">
-              {project.teamSize}
-            </div>
+            <div className="text-2xl font-bold text-white">{project.teamSize}</div>
             <div className="text-slate-400">Team Size</div>
           </div>
           <div className="bg-slate-800/80 backdrop-blur-md border border-slate-700 rounded-xl p-6 text-center">
@@ -918,9 +837,7 @@ export default function ProjectPage({
           </div>
           <div className="bg-slate-800/80 backdrop-blur-md border border-slate-700 rounded-xl p-6 text-center">
             <Code className="w-8 h-8 text-purple-400 mx-auto mb-3" />
-            <div className="text-2xl font-bold text-white">
-              {project.technologies.length}
-            </div>
+            <div className="text-2xl font-bold text-white">{project.technologies.length}</div>
             <div className="text-slate-400">Technologies</div>
           </div>
           <div className="bg-slate-800/80 backdrop-blur-md border border-slate-700 rounded-xl p-6 text-center">
@@ -939,26 +856,22 @@ export default function ProjectPage({
             Technical Skills & Technologies
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {Object.entries(project.technicalSkills).map(
-              ([category, skills]) => (
-                <div
-                  key={category}
-                  className="bg-slate-800/80 backdrop-blur-md border border-slate-700 rounded-xl p-6"
-                >
-                  <h3 className="text-lg font-semibold text-white mb-4 capitalize">
-                    {category}
-                  </h3>
-                  <div className="space-y-2">
-                    {skills.map((skill) => (
-                      <div key={skill} className="flex items-center space-x-2">
-                        <div className="w-2 h-2 bg-blue-400 rounded-full" />
-                        <span className="text-slate-300 text-sm">{skill}</span>
-                      </div>
-                    ))}
-                  </div>
+            {Object.entries(project.technicalSkills).map(([category, skills]) => (
+              <div
+                key={category}
+                className="bg-slate-800/80 backdrop-blur-md border border-slate-700 rounded-xl p-6"
+              >
+                <h3 className="text-lg font-semibold text-white mb-4 capitalize">{category}</h3>
+                <div className="space-y-2">
+                  {skills.map((skill) => (
+                    <div key={skill} className="flex items-center space-x-2">
+                      <div className="w-2 h-2 bg-blue-400 rounded-full" />
+                      <span className="text-slate-300 text-sm">{skill}</span>
+                    </div>
+                  ))}
                 </div>
-              )
-            )}
+              </div>
+            ))}
           </div>
         </div>
 
@@ -969,19 +882,17 @@ export default function ProjectPage({
             My Contributions & Role
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {Object.entries(project.contributions).map(
-              ([area, contribution]) => (
-                <div
-                  key={area}
-                  className="bg-slate-800/80 backdrop-blur-md border border-slate-700 rounded-xl p-6"
-                >
-                  <h3 className="text-lg font-semibold text-white mb-3 capitalize">
-                    {area.replace(/([A-Z])/g, " $1").trim()}
-                  </h3>
-                  <p className="text-slate-300">{contribution}</p>
-                </div>
-              )
-            )}
+            {Object.entries(project.contributions).map(([area, contribution]) => (
+              <div
+                key={area}
+                className="bg-slate-800/80 backdrop-blur-md border border-slate-700 rounded-xl p-6"
+              >
+                <h3 className="text-lg font-semibold text-white mb-3 capitalize">
+                  {area.replace(/([A-Z])/g, " $1").trim()}
+                </h3>
+                <p className="text-slate-300">{contribution}</p>
+              </div>
+            ))}
           </div>
         </div>
 
@@ -993,9 +904,7 @@ export default function ProjectPage({
           </h2>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             <div>
-              <h3 className="text-xl font-semibold text-red-400 mb-4">
-                Challenges Faced
-              </h3>
+              <h3 className="text-xl font-semibold text-red-400 mb-4">Challenges Faced</h3>
               <div className="space-y-3">
                 {project.challenges.map((challenge, index) => (
                   <div key={index} className="flex items-start space-x-3">
@@ -1006,9 +915,7 @@ export default function ProjectPage({
               </div>
             </div>
             <div>
-              <h3 className="text-xl font-semibold text-green-400 mb-4">
-                Solutions Implemented
-              </h3>
+              <h3 className="text-xl font-semibold text-green-400 mb-4">Solutions Implemented</h3>
               <div className="space-y-3">
                 {project.solutions.map((solution, index) => (
                   <div key={index} className="flex items-start space-x-3">
@@ -1029,9 +936,7 @@ export default function ProjectPage({
           </h2>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             <div>
-              <h3 className="text-xl font-semibold text-purple-400 mb-4">
-                Business Impact
-              </h3>
+              <h3 className="text-xl font-semibold text-purple-400 mb-4">Business Impact</h3>
               <div className="space-y-3">
                 {project.businessImpact.map((impact, index) => (
                   <div key={index} className="flex items-start space-x-3">
@@ -1042,18 +947,11 @@ export default function ProjectPage({
               </div>
             </div>
             <div>
-              <h3 className="text-xl font-semibold text-blue-400 mb-4">
-                Key Metrics
-              </h3>
+              <h3 className="text-xl font-semibold text-blue-400 mb-4">Key Metrics</h3>
               <div className="grid grid-cols-2 gap-4">
                 {Object.entries(project.metrics).map(([metric, value]) => (
-                  <div
-                    key={metric}
-                    className="bg-slate-800/60 rounded-lg p-4 text-center"
-                  >
-                    <div className="text-lg font-semibold text-white">
-                      {value}
-                    </div>
+                  <div key={metric} className="bg-slate-800/60 rounded-lg p-4 text-center">
+                    <div className="text-lg font-semibold text-white">{value}</div>
                     <div className="text-slate-400 text-sm capitalize">
                       {metric.replace(/([A-Z])/g, " $1").trim()}
                     </div>
@@ -1067,13 +965,11 @@ export default function ProjectPage({
         {/* Call to Action */}
         <div className="text-center">
           <div className="bg-slate-800/80 backdrop-blur-md border border-slate-700 rounded-2xl p-8">
-            <h3 className="text-2xl font-bold text-white mb-4">
-              Interested in working together?
-            </h3>
+            <h3 className="text-2xl font-bold text-white mb-4">Interested in working together?</h3>
             <p className="text-slate-300 mb-6 max-w-2xl mx-auto">
-              I bring a unique combination of technical expertise, project
-              management skills, and entrepreneurial mindset to every project.
-              Let&apos;s discuss how I can contribute to your next initiative.
+              I bring a unique combination of technical expertise, project management skills, and
+              entrepreneurial mindset to every project. Let&apos;s discuss how I can contribute to
+              your next initiative.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link

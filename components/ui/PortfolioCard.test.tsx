@@ -1,15 +1,32 @@
-import { render, screen, fireEvent } from "@testing-library/react";
+import { render, screen } from "@testing-library/react";
 import PortfolioCard from "@/components/ui/PortfolioCard";
 
 // Mock Next.js components
 jest.mock("next/image", () => {
-  return function MockImage({ src, alt, ...props }: any) {
+  return function MockImage({
+    src,
+    alt,
+    ...props
+  }: {
+    src: string;
+    alt: string;
+    [key: string]: unknown;
+  }) {
+    // biome-ignore lint/performance/noImgElement: Mock component for testing
     return <img src={src} alt={alt} {...props} />;
   };
 });
 
 jest.mock("next/link", () => {
-  return function MockLink({ href, children, ...props }: any) {
+  return function MockLink({
+    href,
+    children,
+    ...props
+  }: {
+    href: string;
+    children: React.ReactNode;
+    [key: string]: unknown;
+  }) {
     return (
       <a href={href} {...props}>
         {children}
@@ -21,11 +38,17 @@ jest.mock("next/link", () => {
 // Mock framer-motion
 jest.mock("framer-motion", () => ({
   motion: {
-    div: ({ children, ...props }: any) => <div {...props}>{children}</div>,
-    a: ({ children, ...props }: any) => <a {...props}>{children}</a>,
-    span: ({ children, ...props }: any) => <span {...props}>{children}</span>,
+    div: ({ children, ...props }: { children: React.ReactNode; [key: string]: unknown }) => (
+      <div {...props}>{children}</div>
+    ),
+    a: ({ children, ...props }: { children: React.ReactNode; [key: string]: unknown }) => (
+      <a {...props}>{children}</a>
+    ),
+    span: ({ children, ...props }: { children: React.ReactNode; [key: string]: unknown }) => (
+      <span {...props}>{children}</span>
+    ),
   },
-  AnimatePresence: ({ children }: any) => children,
+  AnimatePresence: ({ children }: { children: React.ReactNode }) => children,
 }));
 
 const mockProps = {
@@ -47,9 +70,7 @@ describe("PortfolioCard", () => {
     render(<PortfolioCard {...mockProps} />);
 
     expect(screen.getByText("Test Project")).toBeInTheDocument();
-    expect(
-      screen.getByText("This is a test project description")
-    ).toBeInTheDocument();
+    expect(screen.getByText("This is a test project description")).toBeInTheDocument();
     expect(screen.getByText("Web")).toBeInTheDocument();
     expect(screen.getByText("2024")).toBeInTheDocument();
     expect(screen.getByText("3 members")).toBeInTheDocument();
@@ -68,9 +89,7 @@ describe("PortfolioCard", () => {
     render(<PortfolioCard {...mockProps} />);
 
     const allLinks = screen.getAllByRole("link");
-    const demoLink = allLinks.find(
-      (link) => link.getAttribute("href") === "https://demo.com"
-    );
+    const demoLink = allLinks.find((link) => link.getAttribute("href") === "https://demo.com");
     const githubLinkByHref = allLinks.find(
       (link) => link.getAttribute("href") === "https://github.com/test"
     );
@@ -109,14 +128,7 @@ describe("PortfolioCard", () => {
   it("limits technology tags display to 4", () => {
     const manyTechProps = {
       ...mockProps,
-      technologies: [
-        "React",
-        "TypeScript",
-        "Next.js",
-        "Tailwind",
-        "Jest",
-        "Node.js",
-      ],
+      technologies: ["React", "TypeScript", "Next.js", "Tailwind", "Jest", "Node.js"],
     };
 
     render(<PortfolioCard {...manyTechProps} />);

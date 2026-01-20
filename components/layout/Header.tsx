@@ -1,8 +1,8 @@
 "use client";
 
-import { useState } from "react";
 import { motion } from "framer-motion";
-import { Menu, X, Github, Linkedin, Mail, Sun, Moon } from "lucide-react";
+import { Github, Linkedin, Mail, Menu, Moon, Sun, X } from "lucide-react";
+import { useState } from "react";
 
 interface HeaderProps {
   themeMode: "farcaster" | "dark" | "light";
@@ -48,9 +48,7 @@ export default function Header({ themeMode, setThemeMode }: HeaderProps) {
             <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center">
               <span className="text-white font-bold text-lg">CL</span>
             </div>
-            <span className="ml-3 text-xl font-bold text-white">
-              Christian Ray Leovido
-            </span>
+            <span className="ml-3 text-xl font-bold text-white">Christian Ray Leovido</span>
           </motion.div>
 
           {/* Desktop Navigation */}
@@ -90,11 +88,7 @@ export default function Header({ themeMode, setThemeMode }: HeaderProps) {
             {/* Theme Toggle */}
             <motion.button
               onClick={() => {
-                const modes: ("farcaster" | "dark" | "light")[] = [
-                  "farcaster",
-                  "dark",
-                  "light",
-                ];
+                const modes: ("farcaster" | "dark" | "light")[] = ["farcaster", "dark", "light"];
                 const currentIndex = modes.indexOf(themeMode);
                 const nextMode = modes[(currentIndex + 1) % modes.length];
                 setThemeMode(nextMode);
@@ -156,6 +150,7 @@ export default function Header({ themeMode, setThemeMode }: HeaderProps) {
                 })}
 
                 <button
+                  type="button"
                   onClick={() => {
                     const modes: ("farcaster" | "dark" | "light")[] = [
                       "farcaster",
@@ -168,11 +163,7 @@ export default function Header({ themeMode, setThemeMode }: HeaderProps) {
                   }}
                   className="p-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-slate-900"
                 >
-                  {themeMode === "light" ? (
-                    <Sun size={18} />
-                  ) : (
-                    <Moon size={18} />
-                  )}
+                  {themeMode === "light" ? <Sun size={18} /> : <Moon size={18} />}
                 </button>
               </div>
             </nav>

@@ -1,20 +1,15 @@
 "use client";
 
-import { motion, AnimatePresence } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 
 interface MasonryGridProps {
   children: React.ReactNode[];
   className?: string;
 }
 
-export default function MasonryGrid({
-  children,
-  className = "",
-}: MasonryGridProps) {
+export default function MasonryGrid({ children, className = "" }: MasonryGridProps) {
   return (
-    <div
-      className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 ${className}`}
-    >
+    <div className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 ${className}`}>
       <AnimatePresence mode="popLayout">
         {children.map((child, index) => (
           <motion.div

@@ -1,6 +1,6 @@
 "use client";
-import React, { useState, useEffect } from "react";
 import Image from "next/image";
+import { useEffect, useState } from "react";
 
 type Language = "en" | "es";
 
@@ -14,8 +14,7 @@ const translations = {
       title: "About Me",
       p1: "Self-taught iOS engineer with",
       p1Bold: "9+ years",
-      p1Cont:
-        "building production apps at scale. Led development for airline loyalty apps serving",
+      p1Cont: "building production apps at scale. Led development for airline loyalty apps serving",
       p1Bold2: "1M+ users",
       p1Cont2:
         "(British Airways, Aer Lingus, Vueling). Expert in Swift, SwiftUI, React Native, and building systems that scale.",
@@ -261,8 +260,7 @@ const translations = {
       },
       award2: {
         title: "🏅 Premio Europeo de Innovación 2018",
-        description:
-          "Tecnología Restaurantes • Centro Excel Londres • AccentPOS",
+        description: "Tecnología Restaurantes • Centro Excel Londres • AccentPOS",
       },
       award3: {
         title: "⭐ Calificación de Mentoría 5/5",
@@ -420,7 +418,7 @@ const translations = {
 // as they contain specific technical terms and proper nouns
 
 export default function PortfolioDashboard() {
-  const [selectedProject, setSelectedProject] = useState(null);
+  const [_selectedProject, _setSelectedProject] = useState(null);
   const [language, setLanguage] = useState<Language>("en");
 
   useEffect(() => {
@@ -540,14 +538,7 @@ export default function PortfolioDashboard() {
       duration: "Nov 2021 - Mar 2025",
       users: t.projects.aerLingus.users,
       impact: t.projects.aerLingus.impact,
-      tech: [
-        "React Native",
-        "TypeScript",
-        "Kotlin",
-        "Swift",
-        "Native Modules",
-        "Redux Toolkit",
-      ],
+      tech: ["React Native", "TypeScript", "Kotlin", "Swift", "Native Modules", "Redux Toolkit"],
       links: {},
       icon: "/aer-logo.webp",
       screenshots: ["/aer-1.webp", "/aer-2.webp", "/aer-3.webp", "/aer-4.webp"],
@@ -564,21 +555,10 @@ export default function PortfolioDashboard() {
       duration: "Nov 2021 - Mar 2025",
       users: t.projects.vueling.users,
       impact: t.projects.vueling.impact,
-      tech: [
-        "React Native",
-        "TypeScript",
-        "DevCycle",
-        "Fastlane",
-        "GitHub Actions",
-      ],
+      tech: ["React Native", "TypeScript", "DevCycle", "Fastlane", "GitHub Actions"],
       links: {},
       icon: "/vueling-logo.webp",
-      screenshots: [
-        "/vueling-1.webp",
-        "/vueling-2.webp",
-        "/vueling-3.webp",
-        "/vueling-4.webp",
-      ],
+      screenshots: ["/vueling-1.webp", "/vueling-2.webp", "/vueling-3.webp", "/vueling-4.webp"],
       image: "/vueling-1.webp",
       color: "from-yellow-900/30 to-orange-900/30",
       borderColor: "border-yellow-800",
@@ -626,14 +606,7 @@ export default function PortfolioDashboard() {
       duration: "1 week (Take-home exercise)",
       users: t.projects.planetViewer.users,
       impact: t.projects.planetViewer.impact,
-      tech: [
-        "SwiftUI",
-        "MVVM",
-        "Combine",
-        "async/await",
-        "SPM",
-        "Protocol-Oriented",
-      ],
+      tech: ["SwiftUI", "MVVM", "Combine", "async/await", "SPM", "Protocol-Oriented"],
       links: {
         github: "https://github.com/leovido/Planet-Viewer-Portfolio",
       },
@@ -652,14 +625,7 @@ export default function PortfolioDashboard() {
       duration: "1 week (Take-home exercise)",
       users: t.projects.tcaFinance.users,
       impact: t.projects.tcaFinance.impact,
-      tech: [
-        "TCA",
-        "SwiftUI",
-        "SPM",
-        "XCTest",
-        "XCUITest",
-        "Dependency Injection",
-      ],
+      tech: ["TCA", "SwiftUI", "SPM", "XCTest", "XCUITest", "Dependency Injection"],
       links: {
         github: "https://github.com/leovido/composable-much-better-exercise",
       },
@@ -678,13 +644,7 @@ export default function PortfolioDashboard() {
       duration: "Q4 2024",
       users: t.projects.rumourcast.users,
       impact: t.projects.rumourcast.impact,
-      tech: [
-        "Next.js",
-        "TypeScript",
-        "Noir (ZK)",
-        "Farcaster Protocol",
-        "Vercel",
-      ],
+      tech: ["Next.js", "TypeScript", "Noir (ZK)", "Farcaster Protocol", "Vercel"],
       links: {
         github: "https://github.com/leovido/rumourcast",
         channel: "https://warpcast.com/~/channel/rumours",
@@ -712,11 +672,10 @@ export default function PortfolioDashboard() {
             </div>
             <div className="flex gap-3">
               <button
+                type="button"
                 onClick={toggleLanguage}
                 className="px-4 py-2 bg-gray-800 hover:bg-gray-700 rounded-lg transition text-sm flex items-center gap-2"
-                aria-label={
-                  language === "en" ? "Cambiar a español" : "Switch to English"
-                }
+                aria-label={language === "en" ? "Cambiar a español" : "Switch to English"}
               >
                 {language === "en" ? "🇪🇸 ES" : "🇬🇧 EN"}
               </button>
@@ -755,15 +714,12 @@ export default function PortfolioDashboard() {
             <h2 className="text-3xl font-bold mb-6">{t.about.title}</h2>
             <div className="space-y-4 text-gray-300 leading-relaxed">
               <p className="text-lg">
-                {t.about.p1}{" "}
-                <strong className="text-blue-400">{t.about.p1Bold}</strong>{" "}
-                {t.about.p1Cont}{" "}
-                <strong className="text-purple-400">{t.about.p1Bold2}</strong>{" "}
+                {t.about.p1} <strong className="text-blue-400">{t.about.p1Bold}</strong>{" "}
+                {t.about.p1Cont} <strong className="text-purple-400">{t.about.p1Bold2}</strong>{" "}
                 {t.about.p1Cont2}
               </p>
               <p>
-                {t.about.p2}{" "}
-                <strong className="text-orange-400">{t.about.p2Bold}</strong>
+                {t.about.p2} <strong className="text-orange-400">{t.about.p2Bold}</strong>
                 {t.about.p2Cont}
               </p>
               <p>{t.about.p3}</p>
@@ -777,9 +733,7 @@ export default function PortfolioDashboard() {
                   className="bg-gray-800/50 rounded-xl p-4 text-center border border-gray-700 hover:border-blue-500 transition"
                 >
                   <div className="text-3xl mb-2">{stat.icon}</div>
-                  <div className="text-xl font-bold text-blue-400">
-                    {stat.value}
-                  </div>
+                  <div className="text-xl font-bold text-blue-400">{stat.value}</div>
                   <div className="text-xs text-gray-400 mt-1">{stat.label}</div>
                 </div>
               ))}
@@ -794,45 +748,29 @@ export default function PortfolioDashboard() {
                 <div className="flex items-start gap-3 p-4 bg-gray-800/30 rounded-lg">
                   <span className="text-2xl">🚀</span>
                   <div>
-                    <h4 className="font-semibold text-white">
-                      {t.about.differentiator1.title}
-                    </h4>
-                    <p className="text-sm text-gray-400">
-                      {t.about.differentiator1.desc}
-                    </p>
+                    <h4 className="font-semibold text-white">{t.about.differentiator1.title}</h4>
+                    <p className="text-sm text-gray-400">{t.about.differentiator1.desc}</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-3 p-4 bg-gray-800/30 rounded-lg">
                   <span className="text-2xl">📊</span>
                   <div>
-                    <h4 className="font-semibold text-white">
-                      {t.about.differentiator2.title}
-                    </h4>
-                    <p className="text-sm text-gray-400">
-                      {t.about.differentiator2.desc}
-                    </p>
+                    <h4 className="font-semibold text-white">{t.about.differentiator2.title}</h4>
+                    <p className="text-sm text-gray-400">{t.about.differentiator2.desc}</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-3 p-4 bg-gray-800/30 rounded-lg">
                   <span className="text-2xl">🔄</span>
                   <div>
-                    <h4 className="font-semibold text-white">
-                      {t.about.differentiator3.title}
-                    </h4>
-                    <p className="text-sm text-gray-400">
-                      {t.about.differentiator3.desc}
-                    </p>
+                    <h4 className="font-semibold text-white">{t.about.differentiator3.title}</h4>
+                    <p className="text-sm text-gray-400">{t.about.differentiator3.desc}</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-3 p-4 bg-gray-800/30 rounded-lg">
                   <span className="text-2xl">⚡</span>
                   <div>
-                    <h4 className="font-semibold text-white">
-                      {t.about.differentiator4.title}
-                    </h4>
-                    <p className="text-sm text-gray-400">
-                      {t.about.differentiator4.desc}
-                    </p>
+                    <h4 className="font-semibold text-white">{t.about.differentiator4.title}</h4>
+                    <p className="text-sm text-gray-400">{t.about.differentiator4.desc}</p>
                   </div>
                 </div>
               </div>
@@ -850,9 +788,7 @@ export default function PortfolioDashboard() {
                 className="bg-gradient-to-br from-yellow-900/20 to-orange-900/20 backdrop-blur-sm rounded-xl p-6 border border-yellow-800/50"
               >
                 <h3 className="text-xl font-bold mb-2">{award.title}</h3>
-                <p className="text-gray-300 text-sm mb-2">
-                  {award.description}
-                </p>
+                <p className="text-gray-300 text-sm mb-2">{award.description}</p>
                 <span className="text-xs text-gray-500">{award.year}</span>
               </div>
             ))}
@@ -882,8 +818,7 @@ export default function PortfolioDashboard() {
                             sizes="64px"
                           />
                         </div>
-                      ) : typeof project.image === "string" &&
-                        project.image.startsWith("/") ? (
+                      ) : typeof project.image === "string" && project.image.startsWith("/") ? (
                         <div className="relative w-16 h-16 flex-shrink-0 rounded-xl overflow-hidden bg-white/10 border border-white/20">
                           <Image
                             src={project.image}
@@ -897,33 +832,23 @@ export default function PortfolioDashboard() {
                         <div className="text-6xl">{project.image}</div>
                       )}
                       <div>
-                        <h3 className="text-2xl font-bold text-white">
-                          {project.name}
-                        </h3>
-                        <p className="text-blue-400 font-medium">
-                          {project.tagline}
-                        </p>
+                        <h3 className="text-2xl font-bold text-white">{project.name}</h3>
+                        <p className="text-blue-400 font-medium">{project.tagline}</p>
                         <p className="text-sm text-gray-400 mt-1">
                           {project.role} • {project.duration}
                         </p>
                       </div>
                     </div>
                     <div className="text-right">
-                      <div className="text-lg font-semibold text-purple-400">
-                        {project.users}
-                      </div>
+                      <div className="text-lg font-semibold text-purple-400">{project.users}</div>
                     </div>
                   </div>
 
-                  <p className="text-gray-300 mb-6 leading-relaxed">
-                    {project.description}
-                  </p>
+                  <p className="text-gray-300 mb-6 leading-relaxed">{project.description}</p>
 
                   {/* Impact List */}
                   <div className="mb-6">
-                    <h4 className="font-semibold text-white mb-3">
-                      {t.projects.keyImpact}
-                    </h4>
+                    <h4 className="font-semibold text-white mb-3">{t.projects.keyImpact}</h4>
                     <div className="grid md:grid-cols-2 gap-2">
                       {project.impact.map((item, idx) => (
                         <div
@@ -1044,9 +969,7 @@ export default function PortfolioDashboard() {
         <section className="mt-16">
           <div className="bg-gradient-to-r from-blue-900/40 to-purple-900/40 backdrop-blur-sm rounded-2xl p-8 border border-blue-800 text-center">
             <h2 className="text-3xl font-bold mb-4">{t.cta.title}</h2>
-            <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
-              {t.cta.description}
-            </p>
+            <p className="text-gray-300 mb-6 max-w-2xl mx-auto">{t.cta.description}</p>
             <div className="flex justify-center gap-4">
               <a
                 href="mailto:0xleovido@protonmail.com"
@@ -1105,9 +1028,7 @@ export default function PortfolioDashboard() {
               </a>
             </div>
           </div>
-          <div className="text-center text-gray-500 text-xs mt-4">
-            {t.footer.tagline}
-          </div>
+          <div className="text-center text-gray-500 text-xs mt-4">{t.footer.tagline}</div>
         </div>
       </footer>
     </div>

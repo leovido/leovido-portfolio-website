@@ -1,5 +1,5 @@
-import Link from "next/link";
 import { ArrowLeft, Search } from "lucide-react";
+import Link from "next/link";
 
 export default function NotFound() {
   return (
@@ -7,12 +7,9 @@ export default function NotFound() {
       <div className="text-center">
         <div className="mb-8">
           <Search className="w-24 h-24 text-slate-400 mx-auto mb-4" />
-          <h1 className="text-4xl font-bold text-white mb-4">
-            Project Not Found
-          </h1>
+          <h1 className="text-4xl font-bold text-white mb-4">Project Not Found</h1>
           <p className="text-slate-300 text-lg max-w-md mx-auto">
-            Sorry, the project you&apos;re looking for doesn&apos;t exist or has
-            been moved.
+            Sorry, the project you&apos;re looking for doesn&apos;t exist or has been moved.
           </p>
         </div>
 
