@@ -16,7 +16,7 @@ const translations = {
       p1Bold: "9+ years",
       p1Cont:
         "building production apps at scale. Led development for airline loyalty apps serving",
-      p1Bold2: "3M+ users",
+      p1Bold2: "1M+ users",
       p1Cont2:
         "(British Airways, Aer Lingus, Vueling). Expert in Swift, SwiftUI, React Native, and building systems that scale.",
       p2: "My journey started unconventionally: I taught myself iOS development in 2016 without ever owning an iPhone or Mac. Two years later, I co-founded AccentPOS and won the",
@@ -30,7 +30,7 @@ const translations = {
       },
       differentiator2: {
         title: "Scale + Quality",
-        desc: "3M users, 99.5% crash-free maintained",
+        desc: "1M users, 99.5% crash-free maintained",
       },
       differentiator3: {
         title: "Cross-Platform Expert",
@@ -90,7 +90,7 @@ const translations = {
         ],
       },
       avios: {
-        tagline: "Airline Loyalty App - 3M+ Users",
+        tagline: "Airline Loyalty App - 1M+ Users",
         description:
           "Led iOS and React Native development for British Airways loyalty app serving 1M+ members. Maintained 99.5% crash-free sessions while scaling.",
         role: "Senior Mobile Engineer (Solo iOS across 4 teams)",
@@ -206,7 +206,7 @@ const translations = {
     footer: {
       copyright: "© 2025 Christian Ray Leovido • Madrid, Spain",
       tagline:
-        "Senior Mobile Engineer • 9+ Years iOS & React Native • 3M+ Users Served • Available for Opportunities",
+        "Senior Mobile Engineer • 9+ Years iOS & React Native • 1M+ Users Served • Available for Opportunities",
     },
   },
   es: {
@@ -220,7 +220,7 @@ const translations = {
       p1Bold: "9+ años",
       p1Cont:
         "desarrollando aplicaciones de producción a escala. Lideré el desarrollo de aplicaciones de fidelización de aerolíneas que sirven a",
-      p1Bold2: "3M+ usuarios",
+      p1Bold2: "1M+ usuarios",
       p1Cont2:
         "(British Airways, Aer Lingus, Vueling). Experto en Swift, SwiftUI, React Native y en construir sistemas que escalan.",
       p2: "Mi viaje comenzó de forma no convencional: me enseñé desarrollo iOS en 2016 sin haber tenido nunca un iPhone o Mac. Dos años después, cofundé AccentPOS y gané el",
@@ -234,7 +234,7 @@ const translations = {
       },
       differentiator2: {
         title: "Escala + Calidad",
-        desc: "3M usuarios, 99.5% sin fallos mantenido",
+        desc: "1M usuarios, 99.5% sin fallos mantenido",
       },
       differentiator3: {
         title: "Experto Multiplataforma",
@@ -295,7 +295,7 @@ const translations = {
         ],
       },
       avios: {
-        tagline: "App de Fidelización Aerolínea - 3M+ Usuarios",
+        tagline: "App de Fidelización Aerolínea - 1M+ Usuarios",
         description:
           "Lideré el desarrollo iOS y React Native para la app de fidelización de British Airways que sirve a 1M+ miembros. Mantuve 99.5% de sesiones sin fallos mientras escalaba.",
         role: "Ingeniero Móvil Senior (iOS en solitario en 4 equipos)",
@@ -411,7 +411,7 @@ const translations = {
     footer: {
       copyright: "© 2025 Christian Ray Leovido • Madrid, España",
       tagline:
-        "Ingeniero Móvil Senior • 9+ Años iOS y React Native • 3M+ Usuarios Atendidos • Disponible para Oportunidades",
+        "Ingeniero Móvil Senior • 9+ Años iOS y React Native • 1M+ Usuarios Atendidos • Disponible para Oportunidades",
     },
   },
 };
@@ -441,7 +441,7 @@ export default function PortfolioDashboard() {
 
   // Stats array using translations
   const stats = [
-    { icon: "👥", value: "3M+", label: t.stats.usersServed },
+    { icon: "👥", value: "1M+", label: t.stats.usersServed },
     { icon: "📱", value: "9+", label: t.stats.projectsShipped },
     { icon: "⚡", value: "80%", label: t.stats.buildTime },
     { icon: "🚀", value: "75%", label: t.stats.releaseCycle },
