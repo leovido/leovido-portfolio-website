@@ -51,7 +51,7 @@ export default function PortfolioDashboard() {
     {
       id: 2,
       name: "Avios (aka British Airways Executive Club",
-      tagline: "Airline Loyalty App - 3M+ Users",
+      tagline: "Airline Loyalty App - 1M+ Users",
       description:
         "Led iOS and React Native development for British Airways loyalty app serving 1M+ members. Maintained 99.5% crash-free sessions while scaling.",
       role: "Senior Mobile Engineer (Solo iOS across 4 teams)",
@@ -310,7 +310,7 @@ export default function PortfolioDashboard() {
   ];
 
   const stats = [
-    { icon: "👥", value: "3M+", label: "Users Served" },
+    { icon: "👥", value: "1M+", label: "Users Served" },
     { icon: "📱", value: "9+", label: "Projects Shipped" },
     { icon: "⚡", value: "80%", label: "Build Time ↓" },
     { icon: "🚀", value: "75%", label: "Release Cycle ↓" },
@@ -375,7 +375,7 @@ export default function PortfolioDashboard() {
                 <strong className="text-blue-400">9+ years</strong> building
                 production apps at scale. Led development for airline loyalty
                 apps serving{" "}
-                <strong className="text-purple-400">3M+ users</strong> (British
+                <strong className="text-purple-400">1M+ users</strong> (British
                 Airways, Aer Lingus, Vueling). Expert in Swift, SwiftUI, React
                 Native, and building systems that scale.
               </p>
@@ -437,7 +437,7 @@ export default function PortfolioDashboard() {
                       Scale + Quality
                     </h4>
                     <p className="text-sm text-gray-400">
-                      3M users, 99.5% crash-free maintained
+                      1M users, 99.5% crash-free maintained
                     </p>
                   </div>
                 </div>
@@ -740,7 +740,7 @@ export default function PortfolioDashboard() {
             </div>
           </div>
           <div className="text-center text-gray-500 text-xs mt-4">
-            Senior Mobile Engineer • 9+ Years iOS & React Native • 3M+ Users
+            Senior Mobile Engineer • 9+ Years iOS & React Native • 1M+ Users
             Served • Available for Opportunities
           </div>
         </div>
